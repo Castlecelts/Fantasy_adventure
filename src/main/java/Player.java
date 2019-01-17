@@ -62,4 +62,11 @@ public abstract class Player {
     public int basicAttack(){
         return this.currentWeapon.getDamageValue();
     }
+
+    public boolean isDead(){
+        if (this.hitPoints < 1){
+            return true;
+        }
+        return false;
+    }
 }

@@ -61,6 +61,6 @@ public class BarbarianTest {
 
     @Test
     public void basicAttack() {
-        assertEquals(3, connan.getCurrentWeapon().getDamageValue());
+        assertEquals(3, connan.basicAttack());
     }
 }

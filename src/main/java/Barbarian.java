@@ -58,4 +58,9 @@ public class Barbarian extends Player {
     public int getGems() {
         return gems;
     }
+
+    @Override
+    public int basicAttack(){
+        return this.currentWeapon.getDamageValue();
+    }
 }

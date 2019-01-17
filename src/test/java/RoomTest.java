@@ -7,10 +7,10 @@ import static org.junit.Assert.*;
 
 public class RoomTest {
 
-    Room room;
-    Monster monster;
-    ArrayList<WeaponType> weaponLoot;
-    ArrayList<ArmourType> armourLoot;
+    private Room room;
+    private Monster monster;
+    private ArrayList<WeaponType> weaponLoot;
+    private ArrayList<ArmourType> armourLoot;
 
     @Before
     public void setUp() throws Exception {
