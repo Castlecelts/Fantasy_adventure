@@ -1,22 +1,21 @@
 import java.util.ArrayList;
 
 public class Barbarian extends Player {
-    private int hitPoints;
     private ArmourType armour;
     private WeaponType currentWeapon;
     private ArrayList<WeaponType> weapons;
-    private int gold;
-    private int gems;
+//    private int gold;
+//    private int gems;
 
     public Barbarian(String name) {
-        super(name);
-        this.hitPoints = 150;
+        super(name, 150, ArmourType.LOINCLOTH, WeaponType.CLUB );
+//        this.hitPoints = 150;
         this.armour = ArmourType.LOINCLOTH;
         this.currentWeapon = WeaponType.CLUB;
         this.weapons = new ArrayList<>();
         this.weapons.add(currentWeapon);
-        this.gold = 0;
-        this.gems = 0;
+//        this.gold = 0;
+//        this.gems = 0;
     }
 
     @Override
@@ -63,4 +62,10 @@ public class Barbarian extends Player {
     public int basicAttack(){
         return this.currentWeapon.getDamageValue();
     }
+
+    public void setArmour(ArmourType armour) {
+        this.armour = armour;
+    }
+
+
 }

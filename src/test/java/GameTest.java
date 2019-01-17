@@ -35,5 +35,12 @@ public class GameTest {
         assertEquals(true, game.successfulFight());
     }
 
+    @Test
+    public void canGetLoot(){
+        game.getLoot();
+        assertEquals(5, connan.getGold());
+        assertEquals(ArmourType.ENCHANTEDCLOTH, connan.getArmour());
+    }
+
 
 }

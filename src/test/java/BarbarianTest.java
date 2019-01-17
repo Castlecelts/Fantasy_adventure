@@ -42,6 +42,11 @@ public class BarbarianTest {
     }
 
     @Test
+    public void startsNotDead() {
+        assertEquals(false, connan.isDead());
+    }
+
+    @Test
     public void getName() {
         assertEquals("Connan", connan.getName());
     }
@@ -62,5 +67,11 @@ public class BarbarianTest {
     @Test
     public void basicAttack() {
         assertEquals(3, connan.basicAttack());
+    }
+
+    @Test
+    public void canSetArmour(){
+        connan.setArmour(ArmourType.ENCHANTEDCLOTH);
+        assertEquals(ArmourType.ENCHANTEDCLOTH, connan.getArmour());
     }
 }

@@ -30,16 +30,22 @@ public class Game {
     public boolean successfulFight(){
         while (true) {
             this.room.getMonster().loseHealth(playerAttack());
-                if (room.getMonster().isDead()){
-                    return true;
+
+            if (room.getMonster().isDead()) {
+                return true;
+            } else {
+                this.player.loseHealth(monsterAttack());
+                if (player.isDead()) {
+                    return false;
                 }
-                else{
-                    this.player.loseHealth(monsterAttack());
-                    if (player.isDead()){
-                        return false;
-                    }
-                }
+            }
         }
+    }
+
+    public void getLoot(){
+        this.player.addGold(room.getLoot());
+        this.player.setArmour(room.getArmourLoot());
+        this.player.setCurrentWeapon(room.getWeaponLoot());
     }
 
     public void runGame(){

@@ -2,15 +2,21 @@ import java.util.ArrayList;
 
 public abstract class Player {
     private String name;
-    private int hitPoints;
-    private ArmourType armour;
+    protected int hitPoints;
+    protected ArmourType armour;
     private WeaponType currentWeapon;
     private ArrayList<WeaponType>weapons;
-    private int gold;
-    private int gems;
+    protected int gold;
+    protected int gems;
 
-    public Player(String name) {
+    public Player(String name, int hitPoints, ArmourType armour, WeaponType curentWeapon) {
         this.name = name;
+        this.hitPoints = hitPoints;
+        this.weapons = new ArrayList<>();
+        this.armour = armour;
+        this.currentWeapon = curentWeapon;
+        gold = 0;
+        gems = 0;
 
     }
 
@@ -68,5 +74,17 @@ public abstract class Player {
             return true;
         }
         return false;
+    }
+
+    public void setArmour(ArmourType armour) {
+        this.armour = armour;
+    }
+
+    public void addGold(int loot){
+        this.gold += loot;
+    }
+
+    public void addGems(int loot){
+        this.gems += loot;
     }
 }
