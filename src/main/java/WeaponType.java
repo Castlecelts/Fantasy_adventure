@@ -14,4 +14,12 @@ public enum WeaponType {
         this.name = name;
         this.damageValue = damageValue;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getDamageValue() {
+        return damageValue;
+    }
 }

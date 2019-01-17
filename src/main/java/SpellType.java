@@ -11,4 +11,12 @@ public enum SpellType {
         this.spellName = spellName;
         this.spellDamage = spellDamage;
     }
+
+    public String getSpellName() {
+        return spellName;
+    }
+
+    public int getSpellDamage() {
+        return spellDamage;
+    }
 }

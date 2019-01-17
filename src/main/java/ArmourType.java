@@ -13,4 +13,12 @@ public enum ArmourType {
         this.name = name;
         this.value = value;
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getValue() {
+        return value;
+    }
 }

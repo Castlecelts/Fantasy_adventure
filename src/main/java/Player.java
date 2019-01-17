@@ -25,6 +25,10 @@ public abstract class Player {
     public void loseHealth(int damage){
         this.hitPoints -= damage;
     }
+//
+//    public void setHitPoints(){
+//        this.hitPoints = 140;
+//    }
 
     public void heal(int healAmount){
         this.hitPoints += healAmount;
@@ -50,7 +54,12 @@ public abstract class Player {
         return currentWeapon;
     }
 
-    public void setCurrentWeapon(WeaponType currentWeapon) {
+    public void setCurrentWeapon(WeaponType newWeapon) {
         currentWeapon = newWeapon;
+
+    }
+
+    public int basicAttack(){
+        return this.currentWeapon.getDamageValue();
     }
 }
