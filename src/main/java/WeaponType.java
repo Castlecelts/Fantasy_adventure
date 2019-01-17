@@ -5,7 +5,7 @@ public enum WeaponType {
     CLUB("Club", 3),
     AXE("Axe", 4),
     GREATSWORD("Great Sword", 6),
-    BATTLEAXE("Batle Axe", 8);
+    BATTLEAXE("Battle Axe", 8);
 
     private final String name;
     private final int damageValue;
